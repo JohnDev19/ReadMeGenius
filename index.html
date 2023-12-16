@@ -1,25 +1,29 @@
+<!--
+Copyright © 2023 John Ré. All rights reserved.
+
+This content is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License. You may not use this content for commercial purposes or modify it in any way. Attribution must be given to John Ré.
+
+For more information or to request permission for different usage, please contact John Ré at [https://www.facebook.com/IamJohnPoras.org]
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title data-i18n="title">READMEGenius</title>
-    <meta name="description" content="Effortlessly create sophisticated READMEs with this advanced Vue.js-based tool" />
+    <meta name="description" content="READMEGenius is a tool used to generate README files for your projects. Whether you're a developer, a startup owner, or a freelancer, this tool will save you hours of manual writing and formatting. With READMEGenius, you can create informative and visually appealing documentation in a few clicks, ensuring that your project is well-documented and easily understood by users and contributors. Say goodbye to the hassle of writing READMEs from scratch." />
     <meta property="og:title" content="ReadMe Generator" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
-    <meta property="og:description" content="Effortlessly create sophisticated READMEs with this advanced Vue.js-based tool" />
-    <meta property="og:site_name" content="artuurs.smirnovs" />
+    <meta property="og:description" content="READMEGenius is a tool used to generate README files for your projects. Whether you're a developer, a startup owner, or a freelancer, this tool will save you hours of manual writing and formatting. With READMEGenius, you can create informative and visually appealing documentation in a few clicks, ensuring that your project is well-documented and easily understood by users and contributors. Say goodbye to the hassle of writing READMEs from scratch." />
+    <meta property="og:site_name" content="READMEGenius" />
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/README.png" type="image/x-icon" id="faviconTag">
 
-    <link href="" rel="canonical" />
-    <link rel="shortcut icon" href="./images/github-light.png" type="image/x-icon" id="faviconTag">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/vue-simple-markdown.css" />
-    
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -27,7 +31,7 @@
             padding: 0;
             box-sizing: border-box;
             background-color: #001F3F;
-            color: ;
+            color: #00FFDD;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -41,17 +45,19 @@
         }
 
         section {
-    max-width: 80%;
-    width: 100%;
-    padding: 20px;
-    border: 2px solid #00FFDD;
-    color: #00FFDD;
-    margin: 20px 0;
-    border-radius: 8px;
-    overflow-y: auto;
-    max-height: 70vh;
-}
-
+            max-width: 80%;
+            width: 100%;
+            padding: 20px;
+            border: 2px solid #00FFDD;
+            color: #00FFDD;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow-y: auto;
+            max-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
         label {
             font-weight: bold;
@@ -60,7 +66,8 @@
             color: #00FFDD;
         }
 
-        input, textarea {
+        input,
+        textarea {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
@@ -93,12 +100,70 @@
             display: none;
         }
 
+        #webOutput {
+            max-width: 80%;
+            width: 100%;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            display: none;
+        }
+
+        #webOutput pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow: hidden;
+        }
+
+        #webOutput h1,
+        #webOutput h2,
+        #webOutput h3,
+        #webOutput h4,
+        #webOutput h5,
+        #webOutput h6 {
+            font-weight: bold;
+            color: #00FFDD;
+        }
+
+        #webOutput strong {
+            font-weight: bold;
+            color: #00FFDD;
+        }
+
+        #webOutput h1 {
+            font-size: 2em;
+        }
+
+        #webOutput h2 {
+            font-size: 1.5em;
+        }
+
+        #webOutput h3 {
+            font-size: 1.17em;
+        }
+
+        #webOutput h4 {
+            font-size: 1em;
+        }
+
+        #webOutput h5 {
+            font-size: 0.83em;
+        }
+
+        #webOutput h6 {
+            font-size: 0.67em;
+        }
+
+        #webOutput p {
+            margin: 1em 0;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1>READMEGenius</h1>
-        <p>Effortlessly create sophisticated READMEs with this advanced Vue.js-based tool.</p>
+        <p>READMEGenius is a tool used to generate README files for your projects.</p>
     </header>
 
     <section>
@@ -106,7 +171,7 @@
         <form id="readmeForm">
             <label for="projectName">Project Name:</label>
             <input type="text" id="projectName" name="projectName" required>
-            
+
             <label for="alt">Alt for svg:</label>
             <textarea id="alt" name="alt" rows="4" required></textarea>
 
@@ -138,17 +203,22 @@
         </form>
     </section>
 
-    <section id="output">
+    <section id="generatedReadme">
         <h2>Generated README:</h2>
         <pre id="readmeOutput"></pre>
         <button onclick="copyToClipboard()">Copy to Clipboard</button>
+    </section>
+
+    <section id="webOutput">
+        <h2>README Web View:</h2>
+        <pre id="webMarkdownOutput"></pre>
     </section>
 
     <script>
         function generateReadme() {
             const projectName = document.getElementById("projectName").value;
             const alt = document.getElementById("alt").value;
-            const alt = document.getElementById("alt").value;
+            const description = document.getElementById("description").value;
             const languages = document.getElementById("languages").value;
             const webTechnologies = document.getElementById("webTechnologies").value;
             const databases = document.getElementById("databases").value;
@@ -159,22 +229,21 @@
 
             const readmeContent = `
 # ${projectName}
+<img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/github-contribution-grid-snake-dark.svg">
 
 ## Description
 ${description}
 
-[<img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/JohnDev19/main/john.svg">]
+<img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/010.svg">
 
 ## Skills
 - **Programming Languages:** ${languages}
-
-[<img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/JohnDev19/main/topics.icons.svg">]
 
 - **Web Technologies:** ${webTechnologies}
 - **Databases:** ${databases}
 - **Tools & Frameworks:** ${toolsFrameworks}
 
-[<img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/JohnDev19/main/topics.icons.svg">]
+<img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/topics.icons.svg">
 
 ## Projects
 ${projects}
@@ -182,14 +251,21 @@ ${projects}
 ## Connect with Me
 - 🌐 [Social Link](${socialLink})
 
-[<img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/JohnDev19/main/metrics.plugin.stargazers.worldmap.svg">]
+<img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/metrics.plugin.stargazers.worldmap.svg">
 
 ## Support
 - ☕ [Support Me](${supportLink})
+
+<img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/reactions.svg">
 `;
 
             document.getElementById("readmeOutput").textContent = readmeContent;
-            document.getElementById("output").style.display = "block";
+            document.getElementById("generatedReadme").style.display = "block";
+            
+            const converter = new showdown.Converter();
+            const htmlContent = converter.makeHtml(readmeContent);
+            document.getElementById("webMarkdownOutput").innerHTML = htmlContent;
+            document.getElementById("webOutput").style.display = "block";
         }
 
         function copyToClipboard() {
@@ -203,5 +279,8 @@ ${projects}
             alert("README copied to clipboard!");
         }
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
 </body>
+
 </html>
