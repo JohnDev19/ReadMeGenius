@@ -22,7 +22,8 @@ For more information or to request permission for different usage, please contac
     <meta property="og:image" content="" />
     <meta property="og:description" content="READMEGenius is a tool used to generate README files for your projects. Whether you're a developer, a startup owner, or a freelancer, this tool will save you hours of manual writing and formatting. With READMEGenius, you can create informative and visually appealing documentation in a few clicks, ensuring that your project is well-documented and easily understood by users and contributors. Say goodbye to the hassle of writing READMEs from scratch." />
     <meta property="og:site_name" content="READMEGenius" />
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/icon.png" type="image/x-icon" id="faviconTag">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/README.png" type="image/x-icon" id="faviconTag">
+    <script src="scripts.js"></script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -35,7 +36,25 @@ For more information or to request permission for different usage, please contac
             flex-direction: column;
             align-items: center;
         }
+        
+        body::-webkit-scrollbar {
+    width: 12px;
+}
 
+body::-webkit-scrollbar-track {
+    background: #001F3F;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #004080;
+    border-radius: 6px;
+    border: 3px solid #001F3F;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #005099;
+}
+        
         header {
             background-color: #001F3F;
             padding: 20px;
@@ -119,19 +138,38 @@ section {
         }
         
          select {
-             width: 100%;
-             padding: 10px;
-             margin: 10px 0;
-             box-sizing: border-box;
-             border: 1px solid #FFFFFF;
-             border-radius: 4px;
-             color: #00FFDD;
-             background-color: #001F3F;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #FFFFFF;
+            border-radius: 4px;
+            color: #00FFDD;
+            background-color: #001F3F;
         }
 
         select option {
             background-color: #001F3F;
             color: #00FFDD;
+        }
+        
+        option {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #FFFFFF;
+            border-radius: 4px;
+            color: #00FFDD;
+            background-color: #001F3F;
+        }
+
+
+        select[multiple] option:checked {
+            background-color: #004080;
+            color: #00FFDD;
+            border: 1px solid #00FFDD;
+            border-radius: 4px;
         }
 
 
@@ -206,7 +244,7 @@ section {
 
 <body>
     <header>
-        <img id="icon" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/icon.png" alt="icon">
+        <img id="icon" src="icon.png" alt="icon">
         <h1>README<span id="genius">Genius</span></h1>
         <p>READMEGenius is a tool used to generate README files for your projects.</p>
     </header>
@@ -214,17 +252,42 @@ section {
     <section>
         <h1>README Generator Form</h1>
         <form id="readmeForm">
-            <label for="projectName">Project Name:</label>
+            <label for="projectName">Name:</label>
             <input type="text" id="projectName" name="projectName" required>
+            
+             <label for="subtitle">Sub Title:</label>
+            <input type="subtitle" id="subtitle" required>
 
             <label for="alt">Alt for svg:</label>
             <input type="alt" id="alt" required>
-
-            <label for="description">Description:</label>
+            
+            <label for="description">About Me:</label>
             <textarea id="description" name="description" rows="4" required></textarea>
+            
+            <label for="learning">I am currently exploring:</label>
+            <input type="learning" id="learning" required>
+            
+            <section>
+             <label for="imgalt">Alt for Image:</label>
+            <input type="imgalt" id="imgalt" required>
+            
+            <label for="imgURL">Image URL:</label>
+            <input type="text" id="imgURL" name="imgURL" required>
+            </section>
+            
+            <section>
+                <label for="topLangs_UserName">Top Language | User Name:</label>
+                 <input type="text" id="topLangs_UserName" name="topLangs_UserName" required>
+                 
+                 <label for="githubStats_UserName">Github Stats | User Name:</label>
+                 <input type="text" id="githubStats_UserName" name="githubStats_UserName" required>
+                 
+                 <label for="trophies_UserName">Trophies | User Name:</label>
+                 <input type="text" id="trophies_UserName" name="trophies_UserName" required>
+            </section>
 
             <section>
-    <label for="programmingLanguages">Programming Languages:</label>
+    <label for="programmingLanguages">Favorite Programming Languages:</label>
     <select id="programmingLanguages" name="programmingLanguages" required multiple>
                 <option value="ApacheGroovy">Apache Groovy</option>
                 <option value="AssemblyScript">AssemblyScript</option>
@@ -271,11 +334,7 @@ section {
                 <option value="Zig">Zig</option>
                 </select>
                 </section>
-                
-                
-
-            <label for="webTechnologies">Web Technologies:</label>
-            <input type="text" id="webTechnologies" name="webTechnologies" required>
+            
 
             <label for="databases">Databases:</label>
             <select id="databases" name="databases" required multiple>
@@ -302,15 +361,18 @@ section {
                <option value="Teradata">Teradata</option>
 
 </select>
-
-
-
-
-            <label for="toolsFrameworks">Tools & Frameworks:</label>
-            <input type="text" id="toolsFrameworks" name="toolsFrameworks" required>
-
-            <label for="projects">Projects:</label>
-            <textarea id="projects" name="projects" rows="4" required></textarea>
+            
+            <section>
+            <label for="projects">Project:</label>
+            <input type="projects" id="projects" required>
+            
+            <label for="projectLink">Project Link:</label>
+            <input type="projectLink" id="projectLink" required>
+            
+            <label for="projectDescription">Project Description:</label>
+            <textarea id="projectDescription" name="projectDescription" rows="4" required></textarea>
+            </section>
+            
             <section>
             <label for="githubUsername">GitHub Username:</label>
 <input type="text" id="githubUsername" name="githubUsername" required>
@@ -432,7 +494,11 @@ section {
     const streakTheme = document.getElementById("streakTheme").value;
 
     const githubStreakWidget = `<img align="left" width="390" alt="${alt}" src="https://streak-stats.demolab.com/?user=${githubUsername}&theme=${streakTheme}">`;
+    const subtitle = document.getElementById("subtitle").value;
             const description = document.getElementById("description").value;
+            const learning = document.getElementById("learning").value;
+            const imgalt = document.getElementById("imgalt").value;
+            const imgURL = document.getElementById("imgURL").value;
             const selectedLanguages = Array.from(document.getElementById("programmingLanguages").selectedOptions).map(option => option.value);
 
     let languagesSection = "";
@@ -443,7 +509,9 @@ section {
 ${selectedLanguages.map(language => generateLanguageBadge(language)).join("\n")}
 `;
     }
-            const webTechnologies = document.getElementById("webTechnologies").value;
+            const topLangs_UserName = document.getElementById("topLangs_UserName").value;
+            const githubStats_UserName = document.getElementById("githubStats_UserName").value;
+            const trophies_UserName = document.getElementById("trophies_UserName").value;
             const selectedDatabases = Array.from(document.getElementById("databases").selectedOptions).map(option => option.value);
 
 let databasesSection = "";
@@ -454,9 +522,11 @@ if (selectedDatabases.length > 0) {
 ${selectedDatabases.map(database => generateDatabaseBadge(database)).join("\n")}
 `;
 }
-            const toolsFrameworks = document.getElementById("toolsFrameworks").value;
             const projects = document.getElementById("projects").value;
+            const projectLink = document.getElementById("projectLink").value;
+            const projectDescription = document.getElementById("projectDescription").value;
             const socialLink = document.getElementById("socialLink").value;
+        
 
 const selectedSocialLinks = Array.from(document.getElementById("socialLinks").selectedOptions).map(option => option.value);
 
@@ -470,17 +540,26 @@ if (selectedSocialLinks.length > 0) {
             const supportLink = document.getElementById("supportLink").value;
 
             const readmeContent = `
-# ${projectName}
+## Hello, welcome to ${projectName}!
+#### ${subtitle}
+
 <img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/github-contribution-grid-snake-dark.svg">
 
-## Description
 ${description}
+![${imgalt}](${imgURL})
 
 <img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/010.svg">
 
-## Skills:
-- **Web Technologies:** ${webTechnologies}
-- **Tools & Frameworks:** ${toolsFrameworks}
+## 🌱 Currently Learning
+
+I am currently exploring ${learning}.
+
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=${topLangs_UserName})](https://github.com/anuraghazra/github-readme-stats)
+
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=${githubStats_UserName}&show_icons=true)
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=${trophies_UserName})](https://github.com/ryo-ma/github-profile-trophy)
 
 ${languagesSection}
 
@@ -488,8 +567,15 @@ ${databasesSection}
 
 <img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/topics.icons.svg">
 
+
 ## Projects
-${projects}
+
+Here are some of my highlighted projects:
+
+- [**${projects}**](${projectLink}): ${projectDescription}
+
+<!-- Copy this pattern to add more projects -->
+
 
 ## GitHub Streak
 ${githubStreakWidget}
@@ -498,12 +584,18 @@ ${githubStreakWidget}
 ## Connect with Me
 ${socialLinksSection}
 
+<!-- Fill the blank -->
+
+
 <img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/metrics.plugin.stargazers.worldmap.svg">
 
 ## Support
 - ☕ [Support Me](${supportLink})
 
 <img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/reactions.svg">
+
+![Jokes Cavvrd](https://readme-jokes.vercel.app/api?theme=default)
+
 `;
 
             document.getElementById("readmeOutput").textContent = readmeContent;
