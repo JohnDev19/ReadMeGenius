@@ -36,32 +36,32 @@ For more information or to request permission for different usage, please contac
             flex-direction: column;
             align-items: center;
         }
-        
+
         body::-webkit-scrollbar {
-    width: 12px;
-}
+            width: 12px;
+        }
 
-body::-webkit-scrollbar-track {
-    background: #001F3F;
-}
+        body::-webkit-scrollbar-track {
+            background: #001F3F;
+        }
 
-body::-webkit-scrollbar-thumb {
-    background-color: #004080;
-    border-radius: 6px;
-    border: 3px solid #001F3F;
-}
+        body::-webkit-scrollbar-thumb {
+            background-color: #004080;
+            border-radius: 6px;
+            border: 3px solid #001F3F;
+        }
 
-body::-webkit-scrollbar-thumb:hover {
-    background-color: #005099;
-}
-        
+        body::-webkit-scrollbar-thumb:hover {
+            background-color: #005099;
+        }
+
         header {
             background-color: #001F3F;
             padding: 20px;
             text-align: center;
             color: #00FFDD;
         }
-        
+
         h1 {
             color: #FFFFFF;
             display: inline-flex;
@@ -71,38 +71,38 @@ body::-webkit-scrollbar-thumb:hover {
         #icon {
             width: 50px;
             height: 50px;
-            margin-right: 5px; 
+            margin-right: 5px;
             vertical-align: middle;
         }
 
         #genius {
             color: #00FFDD;
         }
-        
-#addButton {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
 
-section {
-    position: relative;
-    max-width: 80%;
-    width: 100%;
-    padding: 20px;
-    border: 2px solid #00FFDD;
-    color: #00FFDD;
-    margin: 20px 0;
-    border-radius: 8px;
-    overflow-y: auto;
-    max-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        #addButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        section {
+            position: relative;
+            max-width: 80%;
+            width: 100%;
+            padding: 20px;
+            border: 2px solid #00FFDD;
+            color: #00FFDD;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow-y: auto;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
 
         label {
@@ -136,8 +136,8 @@ section {
             background-color: #004080;
             color: #00FFDD;
         }
-        
-         select {
+
+        select {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
@@ -152,7 +152,7 @@ section {
             background-color: #001F3F;
             color: #00FFDD;
         }
-        
+
         option {
             width: 100%;
             padding: 10px;
@@ -246,49 +246,51 @@ section {
     <header>
         <img id="icon" src="icon.png" alt="icon">
         <h1>README<span id="genius">Genius</span></h1>
-        <p>READMEGenius is a tool used to generate README files for your projects.</p>
+        <p>
+            READMEGenius is a tool used to generate README files for your projects.
+        </p>
     </header>
 
-    <section>
-        <h1>README Generator Form</h1>
-        <form id="readmeForm">
-            <label for="projectName">Name:</label>
-            <input type="text" id="projectName" name="projectName" required>
-            
-             <label for="subtitle">Sub Title:</label>
-            <input type="subtitle" id="subtitle" required>
 
-            <label for="alt">Alt for svg:</label>
-            <input type="alt" id="alt" required>
-            
-            <label for="description">About Me:</label>
-            <textarea id="description" name="description" rows="4" required></textarea>
-            
-            <label for="learning">I am currently exploring:</label>
-            <input type="learning" id="learning" required>
-            
-            <section>
-             <label for="imgalt">Alt for Image:</label>
+    <h1>README Generator Form</h1>
+    <form id="readmeForm">
+        <label for="projectName">Name:</label>
+        <input type="text" id="projectName" name="projectName" required>
+
+        <label for="subtitle">Sub Title:</label>
+        <input type="subtitle" id="subtitle" required>
+
+        <label for="alt">Alt for svg:</label>
+        <input type="alt" id="alt" required>
+
+        <label for="description">About Me:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <label for="learning">I am currently exploring:</label>
+        <input type="learning" id="learning" required>
+
+        <section>
+            <label for="imgalt">Alt for Image:</label>
             <input type="imgalt" id="imgalt" required>
-            
+
             <label for="imgURL">Image URL:</label>
             <input type="text" id="imgURL" name="imgURL" required>
-            </section>
-            
-            <section>
-                <label for="topLangs_UserName">Top Language | User Name:</label>
-                 <input type="text" id="topLangs_UserName" name="topLangs_UserName" required>
-                 
-                 <label for="githubStats_UserName">Github Stats | User Name:</label>
-                 <input type="text" id="githubStats_UserName" name="githubStats_UserName" required>
-                 
-                 <label for="trophies_UserName">Trophies | User Name:</label>
-                 <input type="text" id="trophies_UserName" name="trophies_UserName" required>
-            </section>
+        </section>
 
-            <section>
-    <label for="programmingLanguages">Favorite Programming Languages:</label>
-    <select id="programmingLanguages" name="programmingLanguages" required multiple>
+        <section>
+            <label for="topLangs_UserName">Top Language | User Name:</label>
+            <input type="text" id="topLangs_UserName" name="topLangs_UserName" required>
+
+            <label for="githubStats_UserName">Github Stats | User Name:</label>
+            <input type="text" id="githubStats_UserName" name="githubStats_UserName" required>
+
+            <label for="trophies_UserName">Trophies | User Name:</label>
+            <input type="text" id="trophies_UserName" name="trophies_UserName" required>
+        </section>
+
+        <section>
+            <label for="programmingLanguages">Favorite Programming Languages:</label>
+            <select id="programmingLanguages" name="programmingLanguages" required multiple>
                 <option value="ApacheGroovy">Apache Groovy</option>
                 <option value="AssemblyScript">AssemblyScript</option>
                 <option value="C">C</option>
@@ -332,16 +334,13 @@ section {
                 <option value="WindowsTerminal">Windows Terminal</option>
                 <option value="YAML">YAML</option>
                 <option value="Zig">Zig</option>
-                </select>
-                </section>
-            
-
+            </select>
             <label for="databases">Databases:</label>
             <select id="databases" name="databases" required multiple>
                 <option value="AmazonDynamoDB">Amazon DynamoDB</option>
                 <option value="Cassandra">Cassandra</option>
                 <option value="CockroachLabs">Cockroach Labs</option>
-                 <option value="Couchbase">Couchbase</option>
+                <option value="Couchbase">Couchbase</option>
                 <option value="Firebase">Firebase Labs</option>
                 <option value="InfluxDB">InfluxDB</option>
                 <option value="MariaDB">MariaDB</option>
@@ -357,123 +356,124 @@ section {
                 <option value="SingleStore">Single Store</option>
                 <option value="SQLite">SQLite</option>
                 <option value="Supabase">Supabase</option>
-               <option value="SurrealDB">SurrealDB</option>
-               <option value="Teradata">Teradata</option>
+                <option value="SurrealDB">SurrealDB</option>
+                <option value="Teradata">Teradata</option>
 
-</select>
-            
-            <section>
+            </select>
+        </section>
+
+        <section>
             <label for="projects">Project:</label>
             <input type="projects" id="projects" required>
-            
+
             <label for="projectLink">Project Link:</label>
             <input type="projectLink" id="projectLink" required>
-            
+
             <label for="projectDescription">Project Description:</label>
             <textarea id="projectDescription" name="projectDescription" rows="4" required></textarea>
-            </section>
-            
-            <section>
+        </section>
+
+        <section>
             <label for="githubUsername">GitHub Username:</label>
-<input type="text" id="githubUsername" name="githubUsername" required>
+            <input type="text" id="githubUsername" name="githubUsername" required>
 
-<label for="streakTheme">Streak Theme:</label>
-<select id="streakTheme" name="streakTheme" required>
-    <option value="default">Default</option>
-    <option value="dark">Dark</option>
-    <option value="highcontrast">High Contrast</option>
-    <option value="transparent">Transparent</option>
-    <option value="radical">Radical</option>
-    <option value="merko">Merko</option>
-    <option value="gruvbox">Gruvbox</option>
-    <option value="gruvbox-duo">Gruvbox Duo</option>
-    <option value="tokyonight">Tokyonight</option>
-    <option value="tokyonight-duo">Tokyonight Duo</option>
-    <option value="onedark">Onedark</option>
-    <option value="onedark-duo">Onedark Duo</option>
-    <option value="cobalt">Cobalt</option>
-    <option value="synthwave">Synthwave</option>
-    <option value="dracula">Dracula</option>
-    <option value="prussian">Prussian</option>
-    <option value="monokai">Monokai</option>
-    <option value="vue">Vue</option>
-    <option value="vue-dark">Vue Dark</option>
-    <option value="shades-of-purple">Shades of Purple</option>
-    <option value="nightowl">Nightowl</option>
-    <option value="buefy-dark">Bluefy Dark</option>
-    <option value="blue-green">Blue Gree </option>
-    <option value="algolia">Algolia</option>
-    <option value="blue-navy">Blue Navy</option>
-    <option value="humoris">Humoris</option>
-    <option value="javascript">JavaScript</option>
-    <option value="green-nur">Green Nur</option>
-    <option value="yeblu">Yeblu</option>
-    <option value="great-gatsby">Great Gatsby</option>
-    <option value="hacker">Hacker</option>
-    <option value="sunset-gradient">Sunset Gradient</option>
-    <option value="ocean-gradient">Ocean Gradient</option>
-    <option value="ambient-gradient">Ambient Gradient</option>
-    <option value="outrun">Outrun</option>
+            <label for="streakTheme">Streak Theme:</label>
+            <select id="streakTheme" name="streakTheme" required>
+                <option value="default">Default</option>
+                <option value="dark">Dark</option>
+                <option value="highcontrast">High Contrast</option>
+                <option value="transparent">Transparent</option>
+                <option value="radical">Radical</option>
+                <option value="merko">Merko</option>
+                <option value="gruvbox">Gruvbox</option>
+                <option value="gruvbox-duo">Gruvbox Duo</option>
+                <option value="tokyonight">Tokyonight</option>
+                <option value="tokyonight-duo">Tokyonight Duo</option>
+                <option value="onedark">Onedark</option>
+                <option value="onedark-duo">Onedark Duo</option>
+                <option value="cobalt">Cobalt</option>
+                <option value="synthwave">Synthwave</option>
+                <option value="dracula">Dracula</option>
+                <option value="prussian">Prussian</option>
+                <option value="monokai">Monokai</option>
+                <option value="vue">Vue</option>
+                <option value="vue-dark">Vue Dark</option>
+                <option value="shades-of-purple">Shades of Purple</option>
+                <option value="nightowl">Nightowl</option>
+                <option value="buefy-dark">Bluefy Dark</option>
+                <option value="blue-green">Blue Gree </option>
+                <option value="algolia">Algolia</option>
+                <option value="blue-navy">Blue Navy</option>
+                <option value="humoris">Humoris</option>
+                <option value="javascript">JavaScript</option>
+                <option value="green-nur">Green Nur</option>
+                <option value="yeblu">Yeblu</option>
+                <option value="great-gatsby">Great Gatsby</option>
+                <option value="hacker">Hacker</option>
+                <option value="sunset-gradient">Sunset Gradient</option>
+                <option value="ocean-gradient">Ocean Gradient</option>
+                <option value="ambient-gradient">Ambient Gradient</option>
+                <option value="outrun">Outrun</option>
 
-</select>
-</section>
+            </select>
+        </section>
 
-           <section>
+        <section>
             <label for="socialLinks">Social Links:</label>
-<select id="socialLinks" name="socialLinks" required multiple>
-    <option value="Airtable">Airtable</option>
-    <option value="Discord">Discord</option>
-    <option value="Facebook">Facebook</option>
-    <option value="Gmail">Gmail</option>
-    <option value="Goodreads">Goodreads</option>
-    <option value="GoogleMeet">Google Meet</option>
-    <option value="Instagram">Instagram</option>
-    <option value="KakaoTalk">KakaoTalk</option>
-    <option value="Line">Line</option>
-    <option value="LinkedIn">LinkedIn</option>
-    <option value="Linktree">Linktree</option>
-    <option value="Meetup">Meetup</option>
-    <option value="Messenger">Messenger</option>
-    <option value="Mastodon">Mastodon</option>
-    <option value="Outlook">Outlook</option>
-    <option value="Odysee">Odysee</option>
-    <option value="Pinterest">Pinterest</option>
-    <option value="Protonmail">Protonmail</option>
-    <option value="Polywork">Polywork</option>
-    <option value="Reddit">Reddit</option>
-    <option value="Signal">Signal</option>
-    <option value="Skype">Skype</option>
-    <option value="Slack">Slack</option>
-    <option value="Snapchat">Snapchat</option>
-    <option value="TeamSpeak">TeamSpeak</option>
-    <option value="Telegram">Telegram</option>
-    <option value="TencentQQ">Tencent QQ</option>
-    <option value="TikTok">TikTok</option>
-    <option value="Thunderbird">Thunderbird</option>
-    <option value="Tumblr">Tumblr</option>
-    <option value="Tutanota">Tutanota</option>
-    <option value="Twitch">Twitch</option>
-    <option value="Viber">Viber</option>
-    <option value="WeChat">WeChat</option>
-    <option value="WhatsApp">WhatsApp</option>
-    <option value="Wire">Wire</option>
-    <option value="X">X</option>
-    <option value="Xbox">Xbox</option>
-    <option value="XING">XING</option>
-    <option value="YouTube">YouTube</option>
+            <select id="socialLinks" name="socialLinks" required multiple>
+                <option value="Airtable">Airtable</option>
+                <option value="Discord">Discord</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Gmail">Gmail</option>
+                <option value="Goodreads">Goodreads</option>
+                <option value="GoogleMeet">Google Meet</option>
+                <option value="Instagram">Instagram</option>
+                <option value="KakaoTalk">KakaoTalk</option>
+                <option value="Line">Line</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="Linktree">Linktree</option>
+                <option value="Meetup">Meetup</option>
+                <option value="Messenger">Messenger</option>
+                <option value="Mastodon">Mastodon</option>
+                <option value="Outlook">Outlook</option>
+                <option value="Odysee">Odysee</option>
+                <option value="Pinterest">Pinterest</option>
+                <option value="Protonmail">Protonmail</option>
+                <option value="Polywork">Polywork</option>
+                <option value="Reddit">Reddit</option>
+                <option value="Signal">Signal</option>
+                <option value="Skype">Skype</option>
+                <option value="Slack">Slack</option>
+                <option value="Snapchat">Snapchat</option>
+                <option value="TeamSpeak">TeamSpeak</option>
+                <option value="Telegram">Telegram</option>
+                <option value="TencentQQ">Tencent QQ</option>
+                <option value="TikTok">TikTok</option>
+                <option value="Thunderbird">Thunderbird</option>
+                <option value="Tumblr">Tumblr</option>
+                <option value="Tutanota">Tutanota</option>
+                <option value="Twitch">Twitch</option>
+                <option value="Viber">Viber</option>
+                <option value="WeChat">WeChat</option>
+                <option value="WhatsApp">WhatsApp</option>
+                <option value="Wire">Wire</option>
+                <option value="X">X</option>
+                <option value="Xbox">Xbox</option>
+                <option value="XING">XING</option>
+                <option value="YouTube">YouTube</option>
 
-    <label for="socialLink">Social Link:</label>
-            <input type="text" id="socialLink" name="socialLink" required>
-</select>
-</section>
+                <label for="socialLink">Social Link:</label>
+                <input type="text" id="socialLink" name="socialLink" required>
+            </select>
+        </section>
 
 
-            <label for="supportLink">Support Link:</label>
-            <input type="text" id="supportLink" name="supportLink" required>
+        <label for="supportLink">Support Link:</label>
+        <input type="text" id="supportLink" name="supportLink" required>
 
-            <button type="button" onclick="generateReadme()">Generate README</button>
-        </form>
-    </section>
+        <button type="button" onclick="generateReadme()">Generate README</button>
+    </form>
+
 
     <section id="generatedReadme">
         <h2>Generated README:</h2>
@@ -491,285 +491,810 @@ section {
             const projectName = document.getElementById("projectName").value;
             const alt = document.getElementById("alt").value;
             const githubUsername = document.getElementById("githubUsername").value;
-    const streakTheme = document.getElementById("streakTheme").value;
+            const streakTheme = document.getElementById("streakTheme").value;
 
-    const githubStreakWidget = `<img align="left" width="390" alt="${alt}" src="https://streak-stats.demolab.com/?user=${githubUsername}&theme=${streakTheme}">`;
-    const subtitle = document.getElementById("subtitle").value;
+            const githubStreakWidget = `<img align="left" width="390" alt="${alt}" src="https://streak-stats.demolab.com/?user=${githubUsername}&theme=${streakTheme}">`;
+            const subtitle = document.getElementById("subtitle").value;
             const description = document.getElementById("description").value;
             const learning = document.getElementById("learning").value;
             const imgalt = document.getElementById("imgalt").value;
             const imgURL = document.getElementById("imgURL").value;
             const selectedLanguages = Array.from(document.getElementById("programmingLanguages").selectedOptions).map(option => option.value);
 
-    let languagesSection = "";
-    
-    if (selectedLanguages.length > 0) {
-        languagesSection = `
-## Programming Languages:
-${selectedLanguages.map(language => generateLanguageBadge(language)).join("\n")}
-`;
-    }
+            let languagesSection = "";
+
+            if (selectedLanguages.length > 0) {
+                languagesSection = `
+                ## Programming Languages:
+                ${selectedLanguages.map(language => generateLanguageBadge(language)).join("\n")}
+                `;
+            }
             const topLangs_UserName = document.getElementById("topLangs_UserName").value;
             const githubStats_UserName = document.getElementById("githubStats_UserName").value;
             const trophies_UserName = document.getElementById("trophies_UserName").value;
             const selectedDatabases = Array.from(document.getElementById("databases").selectedOptions).map(option => option.value);
 
-let databasesSection = "";
+            let databasesSection = "";
 
-if (selectedDatabases.length > 0) {
-    databasesSection = `
-## Databases:
-${selectedDatabases.map(database => generateDatabaseBadge(database)).join("\n")}
-`;
-}
+            if (selectedDatabases.length > 0) {
+                databasesSection = `
+                ## Databases:
+                ${selectedDatabases.map(database => generateDatabaseBadge(database)).join("\n")}
+                `;
+            }
             const projects = document.getElementById("projects").value;
             const projectLink = document.getElementById("projectLink").value;
             const projectDescription = document.getElementById("projectDescription").value;
             const socialLink = document.getElementById("socialLink").value;
-        
 
-const selectedSocialLinks = Array.from(document.getElementById("socialLinks").selectedOptions).map(option => option.value);
 
-let socialLinksSection = "";
+            const selectedSocialLinks = Array.from(document.getElementById("socialLinks").selectedOptions).map(option => option.value);
 
-if (selectedSocialLinks.length > 0) {
-    socialLinksSection = `
-<a href="${socialLink}">${selectedSocialLinks.map(socialLink => generateSocialLinkBadge(socialLink)).join("\n")}
-`;
-}
+            let socialLinksSection = "";
+
+            if (selectedSocialLinks.length > 0) {
+                socialLinksSection = `
+                <a href="${socialLink}">${selectedSocialLinks.map(socialLink => generateSocialLinkBadge(socialLink)).join("\n")}
+                `;
+            }
             const supportLink = document.getElementById("supportLink").value;
 
             const readmeContent = `
-## Hello, welcome to ${projectName}!
-#### ${subtitle}
+            ## Hello, welcome to ${projectName}!
+            #### ${subtitle}
 
-<img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/github-contribution-grid-snake-dark.svg">
+            <img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/github-contribution-grid-snake-dark.svg">
 
-${description}
-![${imgalt}](${imgURL})
+            ${description}
+            ![${imgalt}](${imgURL})
 
-<img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/010.svg">
+            <img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/010.svg">
 
-## 🌱 Currently Learning
+            ## 🌱 Currently Learning
 
-I am currently exploring ${learning}.
-
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=${topLangs_UserName})](https://github.com/anuraghazra/github-readme-stats)
-
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=${githubStats_UserName}&show_icons=true)
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=${trophies_UserName})](https://github.com/ryo-ma/github-profile-trophy)
-
-${languagesSection}
-
-${databasesSection}
-
-<img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/topics.icons.svg">
+            I am currently exploring ${learning}.
 
 
-## Projects
+            [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=${topLangs_UserName})](https://github.com/anuraghazra/github-readme-stats)
 
-Here are some of my highlighted projects:
+            ![GitHub stats](https://github-readme-stats.vercel.app/api?username=${githubStats_UserName}&show_icons=true)
 
-- [**${projects}**](${projectLink}): ${projectDescription}
+            [![trophy](https://github-profile-trophy.vercel.app/?username=${trophies_UserName})](https://github.com/ryo-ma/github-profile-trophy)
 
-<!-- Copy this pattern to add more projects -->
+            ${languagesSection}
 
+            ${databasesSection}
 
-## GitHub Streak
-${githubStreakWidget}
-
-
-## Connect with Me
-${socialLinksSection}
-
-<!-- Fill the blank -->
+            <img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/topics.icons.svg">
 
 
-<img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/metrics.plugin.stargazers.worldmap.svg">
+            ## Projects
 
-## Support
-- ☕ [Support Me](${supportLink})
+            Here are some of my highlighted projects:
 
-<img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/reactions.svg">
+            - [**${projects}**](${projectLink}): ${projectDescription}
 
-![Jokes Cavvrd](https://readme-jokes.vercel.app/api?theme=default)
+            <!-- Copy this pattern to add more projects -->
 
-`;
+
+            ## GitHub Streak
+            ${githubStreakWidget}
+
+
+            ## Connect with Me
+            ${socialLinksSection}
+
+            <!-- Fill the blank -->
+
+
+            <img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/metrics.plugin.stargazers.worldmap.svg">
+
+            ## Support
+            - ☕ [Support Me](${supportLink})
+
+            <img align="left" width="390" alt="${alt}" src="https://raw.githubusercontent.com/JohnDev19/ReadMeGenius/main/reactions.svg">
+
+            ![Jokes Cavvrd](https://readme-jokes.vercel.app/api?theme=default)
+
+            `;
 
             document.getElementById("readmeOutput").textContent = readmeContent;
             document.getElementById("generatedReadme").style.display = "block";
-            
+
             const converter = new showdown.Converter();
             const htmlContent = converter.makeHtml(readmeContent);
             document.getElementById("webMarkdownOutput").innerHTML = htmlContent;
             document.getElementById("webOutput").style.display = "block";
         }
-        
+
         function generateLanguageBadge(language) {
-    const languageInfo = languagesInfo[language];
-    return `![${languageInfo.name}](${generateBadgeURL(languageInfo)} "${languageInfo.alt}")`;
-}
-
-function generateBadgeURL(languageInfo) {
-    return `https://img.shields.io/badge/${encodeURIComponent(languageInfo.name)}-%23${languageInfo.color}.svg?style=for-the-badge&logo=${encodeURIComponent(languageInfo.badge)}&logoColor=white&labelColor=black`;
-}
-
-const languagesInfo = {
-    ApacheGroovy: { name: "Apache Groovy", badge: "Apache%20Groovy", color: "4298B8", alt: "Apache Groovy" },
-    AssemblyScript: { name: "AssemblyScript", badge: "AssemblyScript", color: "23000000", alt: "AssemblyScript" },
-    C: { name: "C", badge: "c", color: "00599C", alt: "C" },
-    Clojure: { name: "Clojure", badge: "Clojure", color: "Clojure", alt: "Clojure" },
-    Crystal: { name: "Crystal", badge: "crystal", color: "000000", alt: "Crystal" },
-    CSS3: { name: "CSS3", badge: "css3", color: "1572B6", alt: "CSS3" },
-    Dart: { name: "Dart", badge: "dart", color: "0175C2", alt: "Dart" },
-    Elixir: { name: "Elixir", badge: "elixir", color: "4B275F", alt: "Elixir" },
-    Elm: { name: "Elm", badge: "Elm", color: "60B5CC", alt: "Elm" },
-    Erlang: { name: "Erlang", badge: "Erlang", color: "white", alt: "Erlang" },
-    Fortran: { name: "Fortran", badge: "fortran", color: "734F96", alt: "Fortran" },
-    Go: { name: "Go", badge: "go", color: "00ADD8", alt: "Go" },
-    GraphQL: { name: "GraphQL", badge: "GraphQL", color: "E10098", alt: "GraphQL" },
-    Haskell: { name: "Haskell", badge: "Haskell", color: "5e5086", alt: "Haskell" },
-    HTML5: { name: "HTML5", badge: "HTML5", color: "E34F26", alt: "HTML5" },
-    Java: { name: "Java", badge: "java", color: "ED8B00", alt: "Java" },
-    JavaScript: { name: "JavaScript", badge: "javascript", color: "323330", alt: "JavaScript" },
-    Julia: { name: "Julia", badge: "julia", color: "9558B2", alt: "Julia" },
-    Kotlin: { name: "Kotlin", badge: "kotlin", color: "7F52FF", alt: "Kotlin" },
-    LaTeX: { name: "LaTeX", badge: "latex", color: "008080", alt: "LaTeX" },
-    Lua: { name: "Lua", badge: "lua", color: "2C2D72", alt: "Lua" },
-    Markdown: { name: "Markdown", badge: "markdown", color: "000000", alt: "Markdown" },
-    Nim: { name: "Nim", badge: "nim", color: "FFE953", alt: "Nim" },
-    Nix: { name: "Nix", badge: "NIX", color: "5277C3", alt: "Nix" },
-    OCaml: { name: "OCaml", badge: "OCaml", color: "E98407", alt: "OCaml" },
-    Octave: { name: "Octave", badge: "OCTAVE", color: "darkblue", alt: "Octave" },
-    OrgMode: { name: "Org Mode", badge: "orgmode", color: "77AA99", alt: "Org Mode" },
-    Perl: { name: "Perl", badge: "perl", color: "39457E", alt: "Perl" },
-    PHP: { name: "PHP", badge: "php", color: "777BB4", alt: "PHP" },
-    PowerShell: { name: "PowerShell", badge: "PowerShell", color: "5391FE", alt: "PowerShell" },
-    Python: { name: "Python", badge: "python", color: "3670A0", alt: "Python" },
-    R: { name: "R", badge: "R", color: "276DC3", alt: "R" },
-    ReScript: { name: "ReScript", badge: "rescript", color: "14162c", alt: "ReScript" },
-    Ruby: { name: "Ruby", badge: "ruby", color: "CC342D", alt: "Ruby" },
-    Rust: { name: "Rust", badge: "rust", color: "000000", alt: "Rust" },
-    Scala: { name: "Scala", badge: "scala", color: "DC322F", alt: "Scala" },
-    ShellScript: { name: "Shell Script", badge: "shell_script", color: "121011", alt: "Shell Script" },
-    Solidity: { name: "Solidity", badge: "Solidity", color: "363636", alt: "Solidity" },
-    Swift: { name: "Swift", badge: "swift", color: "F54A2A", alt: "Swift" },
-    TypeScript: { name: "TypeScript", badge: "typescript", color: "007ACC", alt: "TypeScript" },
-    WindowsTerminal: { name: "Windows Terminal", badge: "Windows%20Terminal", color: "4D4D4D", alt: "Windows Terminal" },
-    YAML: { name: "YAML", badge: "yaml", color: "ffffff", alt: "YAML" },
-    Zig: { name: "Zig", badge: "Zig", color: "F7A41D", alt: "Zig" }
-};
-
-        
-        function generateDatabaseBadge(database) {
-    const databaseInfo = databasesInfo[database];
-    return `![${databaseInfo.name}](${generateBadgeURL(databaseInfo)} "${databaseInfo.alt}")`;
-}
-
-function generateBadgeURL(databaseInfo) {
-    return `https://img.shields.io/badge/${databaseInfo.badge}-%23${databaseInfo.color}.svg?style=for-the-badge&logo=${databaseInfo.badge}&logoColor=white`;
-}
-
-const databasesInfo = {
-    AmazonDynamoDB: { name: "Amazon DynamoDB", badge: "AmazonDynamoDB", color: "4053D6", alt: "Amazon DynamoDB" },
-    Cassandra: { name: "Cassandra", badge: "ApacheCassandra", color: "1287B1", alt: "Apache Cassandra" },
-    CockroachLabs: { name: "Cockroach Labs", badge: "CockroachLabs", color: "6933FF", alt: "Cockroach Labs" },
-    Couchbase: { name: "Couchbase", badge: "Couchbase", color: "EA2328", alt: "Couchbase" },
-    Firebase: { name: "Firebase", badge: "Firebase", color: "039BE5", alt: "Firebase" },
-    InfluxDB: { name: "InfluxDB", badge: "InfluxDB", color: "22ADF6", alt: "InfluxDB" },
-    MariaDB: { name: "MariaDB", badge: "MariaDB", color: "003545", alt: "MariaDB" },
-    MusicBrainz: { name: "MusicBrainz", badge: "MusicBrainz", color: "EB743B", alt: "MusicBrainz" },
-    MicrosoftSQLServer: { name: "MicrosoftSQLServer", badge: "MicrosoftSQLServer", color: "CC2927", alt: "Microsoft SQL Server" },
-    MongoDB: { name: "MongoDB", badge: "MongoDB", color: "4ea94b", alt: "MongoDB" },
-    MySQL: { name: "MySQL", badge: "MySQL", color: "00f", alt: "MySQL" },
-    Neo4J: { name: "Neo4J", badge: "Neo4J", color: "008CC1", alt: "Neo4J" },
-    PlanetScale: { name: "PlanetScale", badge: "PlanetScale", color: "000000", alt: "Planet Scale" },
-    Postgres: { name: "Postgres", badge: "Postgres", color: "316192", alt: "Postgres" },
-    Realm: { name: "Realm", badge: "Realm", color: "39477F", alt: "Realm" },
-    Redis: { name: "Redis", badge: "Redis", color: "DD0031", alt: "Redis" },
-    SingleStore: { name: "SingleStore", badge: "SingleStore", color: "EB743B", alt: "Single Store" },
-    SQLite: { name: "SQLite", badge: "SQLite", color: "07405e", alt: "SQLite" },
-    Supabase: { name: "Supabase", badge: "Supabase", color: "3ECF8E", alt: "Supabase" },
-    SurrealDB: { name: "SurrealDB", badge: "SurrealDB", color: "FF00A0", alt: "SurrealDB" },
-    Teradata: { name: "Teradata", badge: "Teradata", color: "F37440", alt: "Teradata" },
-};
-
-
-function addSocialLink() {
-    const socialLinksSelect = document.getElementById("socialLinks");
-    const socialLinkInput = document.getElementById("socialLink");
-
-    const newSocialLink = socialLinkInput.value;
-    if (newSocialLink) {
-        if (![...socialLinksSelect.options].some(option => option.value === newSocialLink)) {
-            const newOption = document.createElement("option");
-            newOption.value = newSocialLink;
-            newOption.text = newSocialLink;
-            socialLinksSelect.add(newOption);
-            socialLinkInput.value = ""; 
-        } else {
-            alert("Social link already exists in the list.");
+            const languageInfo = languagesInfo[language];
+            return `![${languageInfo.name}](${generateBadgeURL(languageInfo)} "${languageInfo.alt}")`;
         }
-    } else {
-        alert("Please enter a social link before adding.");
-    }
-}
+
+        function generateBadgeURL(languageInfo) {
+            return `https://img.shields.io/badge/${encodeURIComponent(languageInfo.name)}-%23${languageInfo.color}.svg?style=for-the-badge&logo=${encodeURIComponent(languageInfo.badge)}&logoColor=white&labelColor=black`;
+        }
+
+        const languagesInfo = {
+            ApacheGroovy: {
+                name: "Apache Groovy",
+                badge: "Apache%20Groovy",
+                color: "4298B8",
+                alt: "Apache Groovy"
+            },
+            AssemblyScript: {
+                name: "AssemblyScript",
+                badge: "AssemblyScript",
+                color: "23000000",
+                alt: "AssemblyScript"
+            },
+            C: {
+                name: "C",
+                badge: "c",
+                color: "00599C",
+                alt: "C"
+            },
+            Clojure: {
+                name: "Clojure",
+                badge: "Clojure",
+                color: "Clojure",
+                alt: "Clojure"
+            },
+            Crystal: {
+                name: "Crystal",
+                badge: "crystal",
+                color: "000000",
+                alt: "Crystal"
+            },
+            CSS3: {
+                name: "CSS3",
+                badge: "css3",
+                color: "1572B6",
+                alt: "CSS3"
+            },
+            Dart: {
+                name: "Dart",
+                badge: "dart",
+                color: "0175C2",
+                alt: "Dart"
+            },
+            Elixir: {
+                name: "Elixir",
+                badge: "elixir",
+                color: "4B275F",
+                alt: "Elixir"
+            },
+            Elm: {
+                name: "Elm",
+                badge: "Elm",
+                color: "60B5CC",
+                alt: "Elm"
+            },
+            Erlang: {
+                name: "Erlang",
+                badge: "Erlang",
+                color: "white",
+                alt: "Erlang"
+            },
+            Fortran: {
+                name: "Fortran",
+                badge: "fortran",
+                color: "734F96",
+                alt: "Fortran"
+            },
+            Go: {
+                name: "Go",
+                badge: "go",
+                color: "00ADD8",
+                alt: "Go"
+            },
+            GraphQL: {
+                name: "GraphQL",
+                badge: "GraphQL",
+                color: "E10098",
+                alt: "GraphQL"
+            },
+            Haskell: {
+                name: "Haskell",
+                badge: "Haskell",
+                color: "5e5086",
+                alt: "Haskell"
+            },
+            HTML5: {
+                name: "HTML5",
+                badge: "HTML5",
+                color: "E34F26",
+                alt: "HTML5"
+            },
+            Java: {
+                name: "Java",
+                badge: "java",
+                color: "ED8B00",
+                alt: "Java"
+            },
+            JavaScript: {
+                name: "JavaScript",
+                badge: "javascript",
+                color: "323330",
+                alt: "JavaScript"
+            },
+            Julia: {
+                name: "Julia",
+                badge: "julia",
+                color: "9558B2",
+                alt: "Julia"
+            },
+            Kotlin: {
+                name: "Kotlin",
+                badge: "kotlin",
+                color: "7F52FF",
+                alt: "Kotlin"
+            },
+            LaTeX: {
+                name: "LaTeX",
+                badge: "latex",
+                color: "008080",
+                alt: "LaTeX"
+            },
+            Lua: {
+                name: "Lua",
+                badge: "lua",
+                color: "2C2D72",
+                alt: "Lua"
+            },
+            Markdown: {
+                name: "Markdown",
+                badge: "markdown",
+                color: "000000",
+                alt: "Markdown"
+            },
+            Nim: {
+                name: "Nim",
+                badge: "nim",
+                color: "FFE953",
+                alt: "Nim"
+            },
+            Nix: {
+                name: "Nix",
+                badge: "NIX",
+                color: "5277C3",
+                alt: "Nix"
+            },
+            OCaml: {
+                name: "OCaml",
+                badge: "OCaml",
+                color: "E98407",
+                alt: "OCaml"
+            },
+            Octave: {
+                name: "Octave",
+                badge: "OCTAVE",
+                color: "darkblue",
+                alt: "Octave"
+            },
+            OrgMode: {
+                name: "Org Mode",
+                badge: "orgmode",
+                color: "77AA99",
+                alt: "Org Mode"
+            },
+            Perl: {
+                name: "Perl",
+                badge: "perl",
+                color: "39457E",
+                alt: "Perl"
+            },
+            PHP: {
+                name: "PHP",
+                badge: "php",
+                color: "777BB4",
+                alt: "PHP"
+            },
+            PowerShell: {
+                name: "PowerShell",
+                badge: "PowerShell",
+                color: "5391FE",
+                alt: "PowerShell"
+            },
+            Python: {
+                name: "Python",
+                badge: "python",
+                color: "3670A0",
+                alt: "Python"
+            },
+            R: {
+                name: "R",
+                badge: "R",
+                color: "276DC3",
+                alt: "R"
+            },
+            ReScript: {
+                name: "ReScript",
+                badge: "rescript",
+                color: "14162c",
+                alt: "ReScript"
+            },
+            Ruby: {
+                name: "Ruby",
+                badge: "ruby",
+                color: "CC342D",
+                alt: "Ruby"
+            },
+            Rust: {
+                name: "Rust",
+                badge: "rust",
+                color: "000000",
+                alt: "Rust"
+            },
+            Scala: {
+                name: "Scala",
+                badge: "scala",
+                color: "DC322F",
+                alt: "Scala"
+            },
+            ShellScript: {
+                name: "Shell Script",
+                badge: "shell_script",
+                color: "121011",
+                alt: "Shell Script"
+            },
+            Solidity: {
+                name: "Solidity",
+                badge: "Solidity",
+                color: "363636",
+                alt: "Solidity"
+            },
+            Swift: {
+                name: "Swift",
+                badge: "swift",
+                color: "F54A2A",
+                alt: "Swift"
+            },
+            TypeScript: {
+                name: "TypeScript",
+                badge: "typescript",
+                color: "007ACC",
+                alt: "TypeScript"
+            },
+            WindowsTerminal: {
+                name: "Windows Terminal",
+                badge: "Windows%20Terminal",
+                color: "4D4D4D",
+                alt: "Windows Terminal"
+            },
+            YAML: {
+                name: "YAML",
+                badge: "yaml",
+                color: "ffffff",
+                alt: "YAML"
+            },
+            Zig: {
+                name: "Zig",
+                badge: "Zig",
+                color: "F7A41D",
+                alt: "Zig"
+            }
+        };
 
 
-function generateSocialLinkBadge(socialLink) {
-    const socialLinkInfo = socialLinksInfo[socialLink];
-    return `<img src="${generateBadgeURL(socialLinkInfo)}" /></a>`;
-}
+        function generateDatabaseBadge(database) {
+            const databaseInfo = databasesInfo[database];
+            return `![${databaseInfo.name}](${generateBadgeURL(databaseInfo)} "${databaseInfo.alt}")`;
+        }
 
-function generateBadgeURL(socialLinkInfo) {
-    return `https://img.shields.io/badge/${socialLinkInfo.badge}-%23${socialLinkInfo.color}.svg?style=for-the-badge&logo=${socialLinkInfo.badge}&logoColor=white`;
-}
+        function generateBadgeURL(databaseInfo) {
+            return `https://img.shields.io/badge/${databaseInfo.badge}-%23${databaseInfo.color}.svg?style=for-the-badge&logo=${databaseInfo.badge}&logoColor=white`;
+        }
 
-const socialLinksInfo = {
-    Airtable: { name: "Airtable", badge: "Airtable", color: "18BFFF", alt: "Airtable" },
-    Discord: { name: "Discord", badge: "Discord", color: "235865F2", alt: "Discord" },
-    Facebook: { name: "Facebook", badge: "Facebook", color: "231877F2", alt: "Facebook" },
-    Gmail: { name: "Gmail", badge: "Gmail", color: "D14836", alt: "Gmail" },
-    GoogleMeet: { name: "Google Meet", badge: "GoogleMeet", color: "00897B", alt: "GoogleMeet" },
-    Goodreads: { name: "Goodreads", badge: "Goodreads", color: "F3F1EA", alt: "Goodreads" },
-    Instagram: { name: "Instagram", badge: "Instagram", color: "23E4405F", alt: "Instagram" },
-    KakaoTalk: { name: "KakaoTalk", badge: "KakaoTalk", color: "ffcd00", alt: "KakaoTalk" },
-    Line: { name: "Line", badge: "Line", color: "00C300", alt: "Line" },
-    LinkedIn: { name: "LinkedIn", badge: "LinkedIn", color: "230077B5", alt: "LinkedIn" },
-    Linktree: { name: "Linktree", badge: "Linktree", color: "1de9b6", alt: "Linktree" },
-    Meetup: { name: "Meetup", badge: "Meetup", color: "f64363", alt: "Meetup" },
-    Messenger: { name: "Messenger", badge: "Messenger", color: "00B2FF", alt: "Messenger" },
-    Mastodon: { name: "Mastodon", badge: "Mastodon", color: "232B90D9", alt: "Mastodon" },
-    Outlook: { name: "Outlook", badge: "Outlook", color: "0078D4", alt: "Outlook" },
-    Odysee: { name: "Odysee", badge: "Odysee", color: "EF1970", alt: "Odysee" },
-    Pinterest: { name: "Pinterest", badge: "Pinterest", color: "23E60023", alt: "Pinterest" },
-    Protonmail: { name: "Protonmail", badge: "Protonmail", color: "8B89CC", alt: "Protonmail" },
-    Polywork: { name: "Polywork", badge: "Polywork", color: "543DE0", alt: "Polywork" },
-    Reddit: { name: "Reddit", badge: "Reddit", color: "FF4500", alt: "Reddit" },
-    Signal: { name: "Signal", badge: "Signal", color: "23039BE5", alt: "Signal" },
-    Skype: { name: "Skype", badge: "Skype", color: "2300AFF0", alt: "Skype" },
-    Slack: { name: "Slack", badge: "Slack", color: "4A154B", alt: "Slack" },
-    Snapchat: { name: "Snapchat", badge: "Snapchat", color: "23FFFC00", alt: "Snapchat" },
-    TeamSpeak: { name: "TeamSpeak", badge: "TeamSpeak", color: "2580C3", alt: "TeamSpeak" },
-    Telegram: { name: "Telegram", badge: "Telegram", color: "2CA5E0", alt: "Telegram" },
-    TencentQQ: { name: "Tencent QQ", badge: "TencentQQ", color: "2312B7F5", alt: "Tencent QQ" },
-    TikTok: { name: "TikTok", badge: "TikTok", color: "3F002C", alt: "TikTok" },
-    Thunderbird: { name: "Thunderbird", badge: "Thunderbird", color: "0A84FF", alt: "Thunderbird" },
-    Tumblr: { name: "Tumblr", badge: "Tumblr", color: "2336465D", alt: "Tumblr" },
-    Tutanota: { name: "Tutanota", badge: "Tutanota", color: "840010", alt: "Tutanota" },
-    Twitch: { name: "Twitch", badge: "Twitch", color: "239146FF", alt: "Twitch" },
-    Viber: { name: "Viber", badge: "Viber", color: "8B66A9", alt: "Viber" },
-    WeChat: { name: "WeChat", badge: "WeChat", color: "07C160", alt: "WeChat" },
-    WhatsApp: { name: "WhatsApp", badge: "WhatsApp", color: "25D366", alt: "WhatsApp" },
-    Wire: { name: "Wire", badge: "Wire", color: "B71C1C", alt: "Wire" },
-    X: { name: "X", badge: "X", color: "000000", alt: "X" },
-    Xbox: { name: "Xbox", badge: "Xbox", color: "107C10", alt: "Xbox" },
-    XING: { name: "XING", badge: "xing", color: "006567", alt: "XING" },
-    YouTube: { name: "YouTube", badge: "YouTube", color: "FF0000", alt: "YouTube" },
-    Zoom: { name: "Zoom", badge: "Zoom", color: "23FF0000", alt: "Zoom" },
-};
+        const databasesInfo = {
+            AmazonDynamoDB: {
+                name: "Amazon DynamoDB",
+                badge: "AmazonDynamoDB",
+                color: "4053D6",
+                alt: "Amazon DynamoDB"
+            },
+            Cassandra: {
+                name: "Cassandra",
+                badge: "ApacheCassandra",
+                color: "1287B1",
+                alt: "Apache Cassandra"
+            },
+            CockroachLabs: {
+                name: "Cockroach Labs",
+                badge: "CockroachLabs",
+                color: "6933FF",
+                alt: "Cockroach Labs"
+            },
+            Couchbase: {
+                name: "Couchbase",
+                badge: "Couchbase",
+                color: "EA2328",
+                alt: "Couchbase"
+            },
+            Firebase: {
+                name: "Firebase",
+                badge: "Firebase",
+                color: "039BE5",
+                alt: "Firebase"
+            },
+            InfluxDB: {
+                name: "InfluxDB",
+                badge: "InfluxDB",
+                color: "22ADF6",
+                alt: "InfluxDB"
+            },
+            MariaDB: {
+                name: "MariaDB",
+                badge: "MariaDB",
+                color: "003545",
+                alt: "MariaDB"
+            },
+            MusicBrainz: {
+                name: "MusicBrainz",
+                badge: "MusicBrainz",
+                color: "EB743B",
+                alt: "MusicBrainz"
+            },
+            MicrosoftSQLServer: {
+                name: "MicrosoftSQLServer",
+                badge: "MicrosoftSQLServer",
+                color: "CC2927",
+                alt: "Microsoft SQL Server"
+            },
+            MongoDB: {
+                name: "MongoDB",
+                badge: "MongoDB",
+                color: "4ea94b",
+                alt: "MongoDB"
+            },
+            MySQL: {
+                name: "MySQL",
+                badge: "MySQL",
+                color: "00f",
+                alt: "MySQL"
+            },
+            Neo4J: {
+                name: "Neo4J",
+                badge: "Neo4J",
+                color: "008CC1",
+                alt: "Neo4J"
+            },
+            PlanetScale: {
+                name: "PlanetScale",
+                badge: "PlanetScale",
+                color: "000000",
+                alt: "Planet Scale"
+            },
+            Postgres: {
+                name: "Postgres",
+                badge: "Postgres",
+                color: "316192",
+                alt: "Postgres"
+            },
+            Realm: {
+                name: "Realm",
+                badge: "Realm",
+                color: "39477F",
+                alt: "Realm"
+            },
+            Redis: {
+                name: "Redis",
+                badge: "Redis",
+                color: "DD0031",
+                alt: "Redis"
+            },
+            SingleStore: {
+                name: "SingleStore",
+                badge: "SingleStore",
+                color: "EB743B",
+                alt: "Single Store"
+            },
+            SQLite: {
+                name: "SQLite",
+                badge: "SQLite",
+                color: "07405e",
+                alt: "SQLite"
+            },
+            Supabase: {
+                name: "Supabase",
+                badge: "Supabase",
+                color: "3ECF8E",
+                alt: "Supabase"
+            },
+            SurrealDB: {
+                name: "SurrealDB",
+                badge: "SurrealDB",
+                color: "FF00A0",
+                alt: "SurrealDB"
+            },
+            Teradata: {
+                name: "Teradata",
+                badge: "Teradata",
+                color: "F37440",
+                alt: "Teradata"
+            },
+        };
+
+
+        function addSocialLink() {
+            const socialLinksSelect = document.getElementById("socialLinks");
+            const socialLinkInput = document.getElementById("socialLink");
+
+            const newSocialLink = socialLinkInput.value;
+            if (newSocialLink) {
+                if (![...socialLinksSelect.options].some(option => option.value === newSocialLink)) {
+                    const newOption = document.createElement("option");
+                    newOption.value = newSocialLink;
+                    newOption.text = newSocialLink;
+                    socialLinksSelect.add(newOption);
+                    socialLinkInput.value = "";
+                } else {
+                    alert("Social link already exists in the list.");
+                }
+            } else {
+                alert("Please enter a social link before adding.");
+            }
+        }
+
+
+        function generateSocialLinkBadge(socialLink) {
+            const socialLinkInfo = socialLinksInfo[socialLink];
+            return `<img src="${generateBadgeURL(socialLinkInfo)}" /></a>`;
+        }
+
+        function generateBadgeURL(socialLinkInfo) {
+            return `https://img.shields.io/badge/${socialLinkInfo.badge}-%23${socialLinkInfo.color}.svg?style=for-the-badge&logo=${socialLinkInfo.badge}&logoColor=white`;
+        }
+
+        const socialLinksInfo = {
+            Airtable: {
+                name: "Airtable",
+                badge: "Airtable",
+                color: "18BFFF",
+                alt: "Airtable"
+            },
+            Discord: {
+                name: "Discord",
+                badge: "Discord",
+                color: "235865F2",
+                alt: "Discord"
+            },
+            Facebook: {
+                name: "Facebook",
+                badge: "Facebook",
+                color: "231877F2",
+                alt: "Facebook"
+            },
+            Gmail: {
+                name: "Gmail",
+                badge: "Gmail",
+                color: "D14836",
+                alt: "Gmail"
+            },
+            GoogleMeet: {
+                name: "Google Meet",
+                badge: "GoogleMeet",
+                color: "00897B",
+                alt: "GoogleMeet"
+            },
+            Goodreads: {
+                name: "Goodreads",
+                badge: "Goodreads",
+                color: "F3F1EA",
+                alt: "Goodreads"
+            },
+            Instagram: {
+                name: "Instagram",
+                badge: "Instagram",
+                color: "23E4405F",
+                alt: "Instagram"
+            },
+            KakaoTalk: {
+                name: "KakaoTalk",
+                badge: "KakaoTalk",
+                color: "ffcd00",
+                alt: "KakaoTalk"
+            },
+            Line: {
+                name: "Line",
+                badge: "Line",
+                color: "00C300",
+                alt: "Line"
+            },
+            LinkedIn: {
+                name: "LinkedIn",
+                badge: "LinkedIn",
+                color: "230077B5",
+                alt: "LinkedIn"
+            },
+            Linktree: {
+                name: "Linktree",
+                badge: "Linktree",
+                color: "1de9b6",
+                alt: "Linktree"
+            },
+            Meetup: {
+                name: "Meetup",
+                badge: "Meetup",
+                color: "f64363",
+                alt: "Meetup"
+            },
+            Messenger: {
+                name: "Messenger",
+                badge: "Messenger",
+                color: "00B2FF",
+                alt: "Messenger"
+            },
+            Mastodon: {
+                name: "Mastodon",
+                badge: "Mastodon",
+                color: "232B90D9",
+                alt: "Mastodon"
+            },
+            Outlook: {
+                name: "Outlook",
+                badge: "Outlook",
+                color: "0078D4",
+                alt: "Outlook"
+            },
+            Odysee: {
+                name: "Odysee",
+                badge: "Odysee",
+                color: "EF1970",
+                alt: "Odysee"
+            },
+            Pinterest: {
+                name: "Pinterest",
+                badge: "Pinterest",
+                color: "23E60023",
+                alt: "Pinterest"
+            },
+            Protonmail: {
+                name: "Protonmail",
+                badge: "Protonmail",
+                color: "8B89CC",
+                alt: "Protonmail"
+            },
+            Polywork: {
+                name: "Polywork",
+                badge: "Polywork",
+                color: "543DE0",
+                alt: "Polywork"
+            },
+            Reddit: {
+                name: "Reddit",
+                badge: "Reddit",
+                color: "FF4500",
+                alt: "Reddit"
+            },
+            Signal: {
+                name: "Signal",
+                badge: "Signal",
+                color: "23039BE5",
+                alt: "Signal"
+            },
+            Skype: {
+                name: "Skype",
+                badge: "Skype",
+                color: "2300AFF0",
+                alt: "Skype"
+            },
+            Slack: {
+                name: "Slack",
+                badge: "Slack",
+                color: "4A154B",
+                alt: "Slack"
+            },
+            Snapchat: {
+                name: "Snapchat",
+                badge: "Snapchat",
+                color: "23FFFC00",
+                alt: "Snapchat"
+            },
+            TeamSpeak: {
+                name: "TeamSpeak",
+                badge: "TeamSpeak",
+                color: "2580C3",
+                alt: "TeamSpeak"
+            },
+            Telegram: {
+                name: "Telegram",
+                badge: "Telegram",
+                color: "2CA5E0",
+                alt: "Telegram"
+            },
+            TencentQQ: {
+                name: "Tencent QQ",
+                badge: "TencentQQ",
+                color: "2312B7F5",
+                alt: "Tencent QQ"
+            },
+            TikTok: {
+                name: "TikTok",
+                badge: "TikTok",
+                color: "3F002C",
+                alt: "TikTok"
+            },
+            Thunderbird: {
+                name: "Thunderbird",
+                badge: "Thunderbird",
+                color: "0A84FF",
+                alt: "Thunderbird"
+            },
+            Tumblr: {
+                name: "Tumblr",
+                badge: "Tumblr",
+                color: "2336465D",
+                alt: "Tumblr"
+            },
+            Tutanota: {
+                name: "Tutanota",
+                badge: "Tutanota",
+                color: "840010",
+                alt: "Tutanota"
+            },
+            Twitch: {
+                name: "Twitch",
+                badge: "Twitch",
+                color: "239146FF",
+                alt: "Twitch"
+            },
+            Viber: {
+                name: "Viber",
+                badge: "Viber",
+                color: "8B66A9",
+                alt: "Viber"
+            },
+            WeChat: {
+                name: "WeChat",
+                badge: "WeChat",
+                color: "07C160",
+                alt: "WeChat"
+            },
+            WhatsApp: {
+                name: "WhatsApp",
+                badge: "WhatsApp",
+                color: "25D366",
+                alt: "WhatsApp"
+            },
+            Wire: {
+                name: "Wire",
+                badge: "Wire",
+                color: "B71C1C",
+                alt: "Wire"
+            },
+            X: {
+                name: "X",
+                badge: "X",
+                color: "000000",
+                alt: "X"
+            },
+            Xbox: {
+                name: "Xbox",
+                badge: "Xbox",
+                color: "107C10",
+                alt: "Xbox"
+            },
+            XING: {
+                name: "XING",
+                badge: "xing",
+                color: "006567",
+                alt: "XING"
+            },
+            YouTube: {
+                name: "YouTube",
+                badge: "YouTube",
+                color: "FF0000",
+                alt: "YouTube"
+            },
+            Zoom: {
+                name: "Zoom",
+                badge: "Zoom",
+                color: "23FF0000",
+                alt: "Zoom"
+            },
+        };
 
         function copyToClipboard() {
             const readmeOutput = document.getElementById("readmeOutput");
